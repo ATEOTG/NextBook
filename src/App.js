@@ -35,7 +35,7 @@ class App extends Component {
 
       <Routes>
         <Route path = "/" element = {<BookSub handleSubmit = {this.handleSubmit}/>} />
-        <Route path = "generator" elemenent = {<Generator />} />
+        <Route path = "generator" element = {<Generator bookdate = {this.state.booklist} />} />
       </Routes>
     </html>
   );
