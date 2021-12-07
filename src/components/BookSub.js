@@ -21,7 +21,20 @@ class BookSub extends Component {
        }
     }
     
-    
+    submitForm = (event) => {
+        event.preventDefault();
+        let book = [this.state.title, this.state.author];
+
+        return (
+            
+            this.props.handleSubmit(book),
+            document.getElementById("myform").reset(),
+            this.state.title = "",
+            this.state.author = ""
+        );
+    }
+
+
 
     render() {
 
