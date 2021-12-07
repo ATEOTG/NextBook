@@ -14,7 +14,6 @@ class App extends Component {
   
   handleSubmit = (booklist) => {
     this.setState( (state) => {
-      console.log(this.state.booklist);
       return state.booklist.push(booklist)});
 
   }
@@ -35,7 +34,7 @@ class App extends Component {
 
       <Routes>
         <Route path = "/" element = {<BookSub handleSubmit = {this.handleSubmit}/>} />
-        <Route path = "generator" element = {<Generator bookdate = {this.state.booklist} />} />
+        <Route path = "generator" element = {<Generator bookdata = {this.state.booklist} />} />
       </Routes>
     </html>
   );
