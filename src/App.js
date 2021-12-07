@@ -1,24 +1,26 @@
-import logo from './logo.svg';
+import {Routes, Route, Link} from "react-router-dom";
 import './App.css';
+import BookSub from "./components/BookSub";
+import Generator from "./components/Generator";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <html className="App">
+      
+      <nav>
+          <Link to = "/"> Book </Link>
+      </nav>
+
+      <nav>
+          <Link to = "generator"> Generator </Link>
+      </nav>
+
+
+      <Routes>
+        <Route path = "/" element = {<BookSub />} />
+        <Route path = "generator" elemenent = {<Generator />} />
+      </Routes>
+    </html>
   );
 }
 
