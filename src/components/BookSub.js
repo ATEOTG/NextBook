@@ -1,11 +1,55 @@
-import React from 'react';
+import React, {Component} from 'react';
 
-function BookSub() {
+class BookSub extends Component {
+    constructor(props) {
+        super(props)
+
+        this.state = {title: "", author: ""};
+    }
+    
+    
+    handleChange = event => {
+        
+       event.preventDefault();
+       if (event.target.id == "title") {
+           this.state.title = event.target.value;
+           
+       }
+       else if (event.target.id == "author"){
+           this.state.author = event.target.value;
+           
+       }
+    }
+    
+    
+
+    render() {
+
     return(
-        <> </>
+
+        
+        <form id = "myform"> 
+
+            <h4> Book Title </h4>
+            <input type = "text" id ="title" name = "title"  onChange ={this.handleChange}
+                 />
+            <br></br>
+            
+            <h4> Author </h4> 
+            <input type = "text" id = "author" name = "author"  onChange ={this.handleChange}
+            />
+            
+            <br></br>
+            
+            <button onClick = {this.submitForm}> Submit </button>
+        
+        
+        </form>
 
 
     );
+    
+    }
 }
 
 
