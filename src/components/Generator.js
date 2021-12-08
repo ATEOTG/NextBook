@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 
-
 class Generator extends Component {
 
     constructor(props){
@@ -37,9 +36,10 @@ class Generator extends Component {
 
     render(){
         return(
-            <div> 
+            <div className = "gen"> 
                
-             <button id = "Generate" onClick = {this.result}> Generate </button>
+             <button  onClick = {this.result}
+             style = {{height:150,width:250, marginTop:50, marginBottom: 150, fontSize: 35}}> Generate </button>
             
              <h1>The Next Book You're Going To Read Is </h1>
              <b></b>
