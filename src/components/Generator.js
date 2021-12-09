@@ -28,10 +28,6 @@ class Generator extends Component {
         }));
         
         
-        
-        //alert("The Next Book You're Going To Read Is " + this.props.bookdata[BookPosition][0]  +
-        //" by " + this.props.bookdata[BookPosition][1]);
-        
     }
 
     render(){

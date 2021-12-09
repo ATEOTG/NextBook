@@ -9,10 +9,24 @@ class App extends Component {
   constructor() {
     super()
 
-    this.state = {booklist: []};
+    this.state = {booklist: [], count: 0, color: "aquamarine" };
   }
   
   handleSubmit = (booklist) => {
+    this.state.count += 1;
+    
+    if (this.state.count >= 5 && this.state.count < 10){
+        this.state.color = "burlywood";
+    }
+
+    else if (this.state.count >= 10 && this.state.count < 15){
+      this.state.color = "cadetblue";
+    }
+
+    else if (this.state.count >= 15) {
+      this.state.color = "coral";
+    }
+
     this.setState( (state) => {
       return state.booklist.push(booklist)});
 
@@ -20,7 +34,7 @@ class App extends Component {
   
   render() {  
   return (
-    <html className="App">
+    <html className="App" style = {{backgroundColor: this.state.color ,textAlign: "center", height:"100vh", minHeight: "100vh"}}>
       
 
       <nav>
