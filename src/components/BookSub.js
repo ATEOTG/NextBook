@@ -43,18 +43,20 @@ class BookSub extends Component {
         
         <form id = "myform" > 
 
-            <h4> Book Title </h4>
+            <h4 style = {{fontSize: 40, paddingTop:140}}> Book Title </h4>
             <input type = "text" id ="title" name = "title"  onChange ={this.handleChange}
-                 />
+                  style = {{height: 30, width: 170}}/>
             <br></br>
             
-            <h4> Author </h4> 
+            <h4 style = {{fontSize: 40}}> Author </h4> 
             <input type = "text" id = "author" name = "author"  onChange ={this.handleChange}
-            />
+                style = {{height: 30, width: 170}} />
+        
             
             <br></br>
             
-            <button onClick = {this.submitForm}> Submit </button>
+            <button onClick = {this.submitForm}
+                style = {{marginTop: 50, height:75,width:245, fontSize: 35}}> Submit </button>
         
         
         </form>
