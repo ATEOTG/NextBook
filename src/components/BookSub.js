@@ -43,7 +43,7 @@ class BookSub extends Component {
         
         <form id = "myform" > 
 
-            <h4 style = {{fontSize: 40, paddingTop:140}}> Book Title </h4>
+            <h4 style = {{fontSize: 40, paddingTop:100}}> Book Title </h4>
             <input type = "text" id ="title" name = "title"  onChange ={this.handleChange}
                   style = {{height: 30, width: 170}}/>
             <br></br>
