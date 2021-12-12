@@ -12,7 +12,10 @@ class App extends Component {
     this.state = {booklist: [], count: 0, color: "aquamarine" };
   }
   
+  // When submit button is clicked, this function will be called
   handleSubmit = (booklist) => {
+    // the count increases so that when it reaches a certain number the 
+    //background color of our page changes according to count
     this.state.count += 1;
     
     if (this.state.count >= 5 && this.state.count < 10){

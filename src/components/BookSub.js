@@ -7,7 +7,7 @@ class BookSub extends Component {
         this.state = {title: "", author: ""};
     }
     
-    
+    //anytime a change occurs in the input boxes, it updates the values of our state vars
     handleChange = event => {
         
        event.preventDefault();
@@ -26,8 +26,9 @@ class BookSub extends Component {
         let book = [this.state.title, this.state.author];
 
         return (
-            
+            //calls the function handleSubmit and passes the new list
             this.props.handleSubmit(book),
+            //resets the value in our form and state vars
             document.getElementById("myform").reset(),
             this.state.title = "",
             this.state.author = ""
